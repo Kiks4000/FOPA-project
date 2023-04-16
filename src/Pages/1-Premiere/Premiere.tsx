@@ -1,5 +1,7 @@
 import React from "react";
 
+import NavBar from "../../Components/NavBar";
+
 import PremiereFrancais from "./Francais/PremiereFrancais";
 import PremiereHistoire from "./Histoire/PremiereHistoire";
 import PremiereLangues from "./Langues/PremiereLangues";
@@ -9,24 +11,40 @@ import PremiereSciences from "./Sciences/PremiereSciences";
 import "./Premiere.module.scss";
 
 function Premiere() {
-  // get the current url
   const url = window.location.href;
-  // get the last part of the url
   const urlArray = url.split("/");
   const lastPart = urlArray[urlArray.length - 1];
 
-  if (lastPart === "Francais") {
-    return <PremiereFrancais />;
-  } else if (lastPart === "Histoire") {
-    return <PremiereHistoire />;
-  } else if (lastPart === "Langues") {
-    return <PremiereLangues />;
-  } else if (lastPart === "Maths") {
-    return <PremiereMaths />;
-  } else if (lastPart === "Sciences") {
-    return <PremiereSciences />;
-  }
-  return <div>Premiere</div>;
+  return (
+    <>
+      <NavBar />
+      <section>
+        {lastPart === "francais" ? (
+          <PremiereFrancais />
+        ) : lastPart === "histoire" ? (
+          <PremiereHistoire />
+        ) : lastPart === "langues" ? (
+          <PremiereLangues />
+        ) : lastPart === "maths" ? (
+          <PremiereMaths />
+        ) : lastPart === "sciences" ? (
+          <PremiereSciences />
+        ) : (
+          <div>
+            <h1>Première</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptas, quod, quia, voluptates quae voluptatibus quibusdam
+              accusantium quos voluptatum quas quidem. Quisquam, quae. Quisquam
+              voluptas, quod, quia, voluptates quae voluptatibus quibusdam
+              accusantium quos voluptatum quas quidem. Quisquam, quae. Quisquam
+              voluptas, quod, quia, voluptates quae voluptatibus quibusdam
+            </p>
+          </div>
+        )}
+      </section>
+    </>
+  );
 }
 
 export default Premiere;

@@ -6,18 +6,20 @@
   flex-direction: row;
   align-items: center;
   height: 7rem;
-  position: relative;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   z-index: 1;
 
   .menu-open,
   .menu-close {
-    color: #fff;
+    color: $white;
     cursor: pointer;
     font-family: $font-family;
+    font-weight: bold;
     font-size: 2rem;
     text-transform: uppercase;
-    border-right: 1px solid #000000;
     transition: color 0.2s;
     display: flex;
     height: 100%;
@@ -25,44 +27,32 @@
     align-items: center;
     justify-content: center;
     padding: 0 2rem;
-    margin-right: 2rem;
-    transition: 0.2s ease-in-out;
+    transition: 0.3s ease-in-out;
 
     &:hover {
-      opacity: 0.75;
+      opacity: 0.6;
     }
   }
 
   .menu-open {
-    background-color: #fff;
-    color: #000000;
+    background-color: $white;
+    color: $black;
     &:hover {
       opacity: 1;
     }
-  }
-
-  h1 {
-    color: #fff;
-    padding: 1rem 0;
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-family: $font-family;
-    letter-spacing: 0.3rem;
   }
 }
 
 .nav-open,
 .nav-close {
-  background-color: white;
+  background-color: $white;
   display: flex;
   flex-direction: row;
+  width: 100%;
   justify-content: space-between;
-  padding: 20px;
+  padding: 2.5rem;
   position: relative;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
   z-index: 1;
-  overflow: hidden;
   ul {
     display: flex;
     flex-direction: row;
@@ -75,8 +65,10 @@
       margin: 0;
       padding: 0;
 
+      overflow: hidden;
+
       a {
-        color: #000000;
+        color: $black;
         cursor: pointer;
         text-decoration: none;
         font-family: $font-family;
@@ -89,36 +81,63 @@
           opacity: 0.75;
         }
       }
+    }
+  }
+}
+.under-nav-open,
+.under-nav-close {
+  background-color: $white;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-left: 15rem;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 1;
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
 
-      ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        width: 100%;
+    li {
+      margin: 0;
+      padding: 0;
 
-        li {
-          margin: 0;
-          padding: 0;
+      overflow: hidden;
 
-          a {
-            color: #000000;
-            cursor: pointer;
-            text-decoration: none;
-            font-family: $font-family;
-            font-size: 2rem;
-            text-transform: uppercase;
-            padding: 0.5rem 1rem;
-            transition: color 0.2s;
+      a {
+        color: $black;
+        cursor: pointer;
+        text-decoration: none;
+        font-family: $font-family;
+        font-size: 2rem;
+        text-transform: uppercase;
+        padding: 0.5rem 1rem;
+        transition: color 0.2s;
 
-            &:hover {
-              opacity: 0.75;
-            }
-          }
+        &:hover {
+          opacity: 0.75;
         }
       }
     }
   }
+}
+
+.under-nav-close {
+  position: relative;
+  top: -14rem;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: -2;
+}
+
+.under-nav-open {
+  top: 6rem;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-close {

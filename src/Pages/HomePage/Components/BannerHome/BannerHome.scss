@@ -1,0 +1,56 @@
+@import "../../../../styles/settings.module.scss";
+
+.bannerHome {
+  background-image: url(../../../../images/BannerHome.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: -1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .bannerHome__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5rem;
+    .bannerHome__text--title {
+      font-size: 10rem;
+      color: $black;
+      text-transform: uppercase;
+      font-family: $font-family-title;
+      letter-spacing: 0.3rem;
+      text-shadow: 0.1rem 0 $white, -0.1rem 0 $white, 0 0.1rem $white,
+        0 -0.1rem $white, 0.05rem 0.05rem $white, -0.05rem -0.05rem $white,
+        0.05rem -0.05rem $white, -0.05rem 0.05rem $white;
+    }
+    .bannerHome__text--description {
+      font-size: 3rem;
+      color: $white;
+      font-family: $font-family-manuscrit;
+      letter-spacing: 0.4rem;
+      margin-bottom: 5rem;
+    }
+    .bannerHome__text--text {
+      font-size: 1.5rem;
+      color: $black;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      font-family: $font-family;
+      letter-spacing: 0.5rem;
+
+      padding: 1rem;
+      border-radius: 0.5rem;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}

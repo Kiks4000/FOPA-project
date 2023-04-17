@@ -1,14 +1,19 @@
 import React from "react";
 import NavBar from "../../Components/NavBar";
+import BannerHome from "./Components/BannerHome";
+import Gallery from "./Components/Gallery";
+import Founder from "./Components/Founders";
+import Footer from "../../Components/Footer";
 import "./HomePage.scss";
 
 function HomePage() {
-  const bannerHome = require("../../images/BannerHome.jpg");
   return (
     <>
-      <div className="bannerHome"></div>
       <NavBar />
-      <h1>HOME PAGE</h1>
+      <BannerHome />
+      <Gallery />
+      <Founder />
+      <Footer />
     </>
   );
 }

@@ -77,24 +77,16 @@ const NavBar = () => {
               </Link>
             </li>
             <li>
-              <a href="#" onClick={handlePremiereClick}>
-                1ère Année
-              </a>
+              <a onClick={handlePremiereClick}>1ère Année</a>
             </li>
             <li>
-              <a href="#" onClick={handleDeuxiemeClick}>
-                2ème Année
-              </a>
+              <a onClick={handleDeuxiemeClick}>2ème Année</a>
             </li>
             <li>
-              <a href="#" onClick={handleTroisiemeClick}>
-                3ème Année
-              </a>
+              <a onClick={handleTroisiemeClick}>3ème Année</a>
             </li>
             <li>
-              <a href="#" onClick={handleQuatriemeClick}>
-                4ème Année
-              </a>
+              <a onClick={handleQuatriemeClick}>4ème Année</a>
             </li>
           </ul>
         </nav>

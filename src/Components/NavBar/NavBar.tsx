@@ -12,18 +12,78 @@ const NavBar = () => {
 
   const handlePremiereClick = (): void => {
     setShowPremiere(!showPremiere);
+
+    if (showDeuxieme === true) {
+      setShowDeuxieme(false);
+      setShowPremiere(!showPremiere);
+    }
+
+    if (showTroisieme === true) {
+      setShowTroisieme(false);
+      setShowPremiere(!showPremiere);
+    }
+
+    if (showQuatrieme === true) {
+      setShowQuatrieme(false);
+      setShowPremiere(!showPremiere);
+    }
   };
 
   const handleDeuxiemeClick = (): void => {
     setShowDeuxieme(!showDeuxieme);
+
+    if (showPremiere === true) {
+      setShowPremiere(false);
+      setShowDeuxieme(!showDeuxieme);
+    }
+
+    if (showTroisieme === true) {
+      setShowTroisieme(false);
+      setShowDeuxieme(!showDeuxieme);
+    }
+
+    if (showQuatrieme === true) {
+      setShowQuatrieme(false);
+      setShowDeuxieme(!showDeuxieme);
+    }
   };
 
   const handleTroisiemeClick = (): void => {
     setShowTroisieme(!showTroisieme);
+
+    if (showPremiere === true) {
+      setShowPremiere(false);
+      setShowTroisieme(!showTroisieme);
+    }
+
+    if (showDeuxieme === true) {
+      setShowDeuxieme(false);
+      setShowTroisieme(!showTroisieme);
+    }
+
+    if (showQuatrieme === true) {
+      setShowQuatrieme(false);
+      setShowTroisieme(!showTroisieme);
+    }
   };
 
   const handleQuatriemeClick = (): void => {
     setShowQuatrieme(!showQuatrieme);
+
+    if (showPremiere === true) {
+      setShowPremiere(false);
+      setShowQuatrieme(!showQuatrieme);
+    }
+
+    if (showDeuxieme === true) {
+      setShowDeuxieme(false);
+      setShowQuatrieme(!showQuatrieme);
+    }
+
+    if (showTroisieme === true) {
+      setShowTroisieme(false);
+      setShowQuatrieme(!showQuatrieme);
+    }
   };
 
   const handleShowMenu = (): void => {
@@ -97,27 +157,27 @@ const NavBar = () => {
           <ul>
             <li>
               <Link to="/premiere/francais" onClick={handleCloseMenu}>
-                Francais
+                1ère Francais
               </Link>
             </li>
             <li>
               <Link to="/premiere/histoire" onClick={handleCloseMenu}>
-                Histoire
+                1ère Histoire
               </Link>
             </li>
             <li>
               <Link to="/premiere/maths" onClick={handleCloseMenu}>
-                Maths
+                1ère Maths
               </Link>
             </li>
             <li>
               <Link to="/premiere/langues" onClick={handleCloseMenu}>
-                Langues
+                1ère Langues
               </Link>
             </li>
             <li>
               <Link to="/premiere/sciences" onClick={handleCloseMenu}>
-                Sciences
+                1ère Sciences
               </Link>
             </li>
           </ul>
@@ -129,27 +189,27 @@ const NavBar = () => {
           <ul>
             <li>
               <Link to="/deuxieme/francais" onClick={handleCloseMenu}>
-                Francais
+                2ème Francais
               </Link>
             </li>
             <li>
               <Link to="/deuxieme/histoire" onClick={handleCloseMenu}>
-                Histoire
+                2ème Histoire
               </Link>
             </li>
             <li>
               <Link to="/deuxieme/maths" onClick={handleCloseMenu}>
-                Maths
+                2ème Maths
               </Link>
             </li>
             <li>
               <Link to="/deuxieme/langues" onClick={handleCloseMenu}>
-                Langues
+                2ème Langues
               </Link>
             </li>
             <li>
               <Link to="/deuxieme/sciences" onClick={handleCloseMenu}>
-                Sciences
+                2ème Sciences
               </Link>
             </li>
           </ul>
@@ -161,27 +221,27 @@ const NavBar = () => {
           <ul>
             <li>
               <Link to="/troisieme/francais" onClick={handleCloseMenu}>
-                Francais
+                3ème Francais
               </Link>
             </li>
             <li>
               <Link to="/troisieme/histoire" onClick={handleCloseMenu}>
-                Histoire
+                3ème Histoire
               </Link>
             </li>
             <li>
               <Link to="/troisieme/maths" onClick={handleCloseMenu}>
-                Maths
+                3ème Maths
               </Link>
             </li>
             <li>
               <Link to="/troisieme/langues" onClick={handleCloseMenu}>
-                Langues
+                3ème Langues
               </Link>
             </li>
             <li>
               <Link to="/troisieme/sciences" onClick={handleCloseMenu}>
-                Sciences
+                3ème Sciences
               </Link>
             </li>
           </ul>
@@ -193,27 +253,27 @@ const NavBar = () => {
           <ul>
             <li>
               <Link to="/quatrieme/francais" onClick={handleCloseMenu}>
-                Francais
+                4ème Francais
               </Link>
             </li>
             <li>
               <Link to="/quatrieme/histoire" onClick={handleCloseMenu}>
-                Histoire
+                4ème Histoire
               </Link>
             </li>
             <li>
               <Link to="/quatrieme/maths" onClick={handleCloseMenu}>
-                Maths
+                4ème Maths
               </Link>
             </li>
             <li>
               <Link to="/quatrieme/langues" onClick={handleCloseMenu}>
-                Langues
+                4ème Langues
               </Link>
             </li>
             <li>
               <Link to="/quatrieme/sciences" onClick={handleCloseMenu}>
-                Sciences
+                4ème Sciences
               </Link>
             </li>
           </ul>

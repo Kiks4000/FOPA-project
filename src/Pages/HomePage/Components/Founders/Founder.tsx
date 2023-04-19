@@ -1,8 +1,4 @@
 import React from "react";
-import Alicia from "../../../../images/pp-Alicia.jpg";
-import Angelique from "../../../../images/pp-Angelique.jpg";
-import Catherine from "../../../../images/pp-Cath.jpg";
-import Marie from "../../../../images/pp-Marie.png";
 import "./Founder.scss";
 
 function Founder() {
@@ -20,10 +16,38 @@ function Founder() {
         </p>
       </div>
       <div className="homeFounder__imageContainer">
-        <img src={Alicia} alt="Alicia" />
-        <img src={Angelique} alt="Angelique" />
-        <img src={Catherine} alt="Catherine" />
-        <img src={Marie} alt="Marie" />
+        <div className="homeFounder__imageContainer__hoverable">
+          <div className="homeFounder__imageContainer__hoverable--img img--alicia"></div>
+          <div className="homeFounder__imageContainer__hoverable--text">
+            <h3>Alicia M.</h3>
+            <span>-</span>
+            <p>AESI sciences</p>
+          </div>
+        </div>
+        <div className="homeFounder__imageContainer__hoverable">
+          <div className="homeFounder__imageContainer__hoverable--img img--angelique"></div>
+          <div className="homeFounder__imageContainer__hoverable--text">
+            <h3>Angélique T.</h3>
+            <span>-</span>
+            <p>AESI français - religion</p>
+          </div>
+        </div>
+        <div className="homeFounder__imageContainer__hoverable">
+          <div className="homeFounder__imageContainer__hoverable--img img--marie"></div>
+          <div className="homeFounder__imageContainer__hoverable--text">
+            <h3>Marie D.</h3>
+            <span>-</span>
+            <p>AESI français - religion</p>
+          </div>
+        </div>
+        <div className="homeFounder__imageContainer__hoverable">
+          <div className="homeFounder__imageContainer__hoverable--img img--cath"></div>
+          <div className="homeFounder__imageContainer__hoverable--text">
+            <h3>Catherine C.</h3>
+            <span>-</span>
+            <p>AESI français - religion</p>
+          </div>
+        </div>
       </div>
     </section>
   );

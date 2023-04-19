@@ -60,9 +60,9 @@ const NavBar = () => {
   return (
     <>
       <nav className="transparent-nav">
-        <a className={isMenuOpen} onClick={handleShowMenu}>
+        <p className={isMenuOpen} onClick={handleShowMenu}>
           Menu
-        </a>
+        </p>
 
         <nav className={isNavOpen}>
           <ul>

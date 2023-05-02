@@ -2,4 +2,9 @@
 
 body {
   background-color: gray;
+
+  // TODO : add message to the user to rotate the screen
+  @media (max-width: 475px) {
+    display: none;
+  }
 }

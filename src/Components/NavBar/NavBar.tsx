@@ -1,286 +1,194 @@
-import React from "react";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./NavBar.scss";
-import { Link } from "react-router-dom";
-import { useState } from "react";
 
-const NavBar = () => {
-  const [showMenu, setShowMenu] = useState(false);
-  const [showPremiere, setShowPremiere] = useState(false);
-  const [showDeuxieme, setShowDeuxieme] = useState(false);
-  const [showTroisieme, setShowTroisieme] = useState(false);
-  const [showQuatrieme, setShowQuatrieme] = useState(false);
-
-  const handlePremiereClick = (): void => {
-    setShowPremiere(!showPremiere);
-
-    if (showDeuxieme === true) {
-      setShowDeuxieme(false);
-      setShowPremiere(!showPremiere);
-    }
-
-    if (showTroisieme === true) {
-      setShowTroisieme(false);
-      setShowPremiere(!showPremiere);
-    }
-
-    if (showQuatrieme === true) {
-      setShowQuatrieme(false);
-      setShowPremiere(!showPremiere);
-    }
-  };
-
-  const handleDeuxiemeClick = (): void => {
-    setShowDeuxieme(!showDeuxieme);
-
-    if (showPremiere === true) {
-      setShowPremiere(false);
-      setShowDeuxieme(!showDeuxieme);
-    }
-
-    if (showTroisieme === true) {
-      setShowTroisieme(false);
-      setShowDeuxieme(!showDeuxieme);
-    }
-
-    if (showQuatrieme === true) {
-      setShowQuatrieme(false);
-      setShowDeuxieme(!showDeuxieme);
-    }
-  };
-
-  const handleTroisiemeClick = (): void => {
-    setShowTroisieme(!showTroisieme);
-
-    if (showPremiere === true) {
-      setShowPremiere(false);
-      setShowTroisieme(!showTroisieme);
-    }
-
-    if (showDeuxieme === true) {
-      setShowDeuxieme(false);
-      setShowTroisieme(!showTroisieme);
-    }
-
-    if (showQuatrieme === true) {
-      setShowQuatrieme(false);
-      setShowTroisieme(!showTroisieme);
-    }
-  };
-
-  const handleQuatriemeClick = (): void => {
-    setShowQuatrieme(!showQuatrieme);
-
-    if (showPremiere === true) {
-      setShowPremiere(false);
-      setShowQuatrieme(!showQuatrieme);
-    }
-
-    if (showDeuxieme === true) {
-      setShowDeuxieme(false);
-      setShowQuatrieme(!showQuatrieme);
-    }
-
-    if (showTroisieme === true) {
-      setShowTroisieme(false);
-      setShowQuatrieme(!showQuatrieme);
-    }
-  };
-
-  const handleShowMenu = (): void => {
-    setShowMenu(!showMenu);
-
-    if (showPremiere) {
-      setShowPremiere(false);
-    }
-    if (showDeuxieme) {
-      setShowDeuxieme(false);
-    }
-    if (showTroisieme) {
-      setShowTroisieme(false);
-    }
-    if (showQuatrieme) {
-      setShowQuatrieme(false);
-    }
-  };
-
-  const handleCloseMenu = (): void => {
-    setShowMenu(false);
-    setShowPremiere(false);
-    setShowDeuxieme(false);
-    setShowTroisieme(false);
-    setShowQuatrieme(false);
-  };
-
-  const isNavOpen: string = showMenu ? "nav-open" : "nav-close";
-  const isMenuOpen: string = showMenu ? "menu-open" : "menu-close";
-  const isUnderNavOpen: string =
-    showPremiere || showDeuxieme || showTroisieme || showQuatrieme
-      ? "under-nav-open"
-      : "under-nav-close";
+function NavBar() {
   return (
-    <>
-      <nav className="transparent-nav">
-        <p className={isMenuOpen} onClick={handleShowMenu}>
-          Menu
-        </p>
-
-        <nav className={isNavOpen}>
-          <ul>
-            <li>
-              <Link to="/" onClick={handleShowMenu}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" onClick={handleShowMenu}>
-                Contact
-              </Link>
-            </li>
-            <li>
-              <p onClick={handlePremiereClick}>1ère Année</p>
-            </li>
-            <li>
-              <p onClick={handleDeuxiemeClick}>2ème Année</p>
-            </li>
-            <li>
-              <p onClick={handleTroisiemeClick}>3ème Année</p>
-            </li>
-            <li>
-              <p onClick={handleQuatriemeClick}>4ème Année</p>
-            </li>
-          </ul>
-        </nav>
-      </nav>
-
-      {showPremiere && (
-        <nav className={isUnderNavOpen}>
-          <ul>
-            <li>
-              <Link to="/premiere/francais" onClick={handleCloseMenu}>
-                1ère Francais
-              </Link>
-            </li>
-            <li>
-              <Link to="/premiere/histoire" onClick={handleCloseMenu}>
-                1ère Histoire
-              </Link>
-            </li>
-            <li>
-              <Link to="/premiere/maths" onClick={handleCloseMenu}>
+    <Navbar className="navBar" collapseOnSelect expand="lg" bg="light">
+      <Navbar.Brand href="/" className="navBar--name">
+        E-Collab
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav>
+          <Nav.Link className="navBar-link" href="/competences-numerique">
+            Competences Numériques
+          </Nav.Link>
+          <Nav.Link className="navBar-link" href="/contact">
+            Contact
+          </Nav.Link>
+          <NavDropdown
+            title="Classes"
+            className="navBar-link"
+            id="collasible-nav-dropdown"
+          >
+            <NavDropdown
+              title="1ère"
+              className="navBar-link"
+              id="collasible-nav-dropdown"
+              drop="end"
+            >
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/premiere/francais"
+              >
+                1ère Français
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item className="navBar-link" href="/premiere/maths">
                 1ère Maths
-              </Link>
-            </li>
-            <li>
-              <Link to="/premiere/langues" onClick={handleCloseMenu}>
-                1ère Langues
-              </Link>
-            </li>
-            <li>
-              <Link to="/premiere/sciences" onClick={handleCloseMenu}>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/premiere/histoire"
+              >
+                1ère Histoire
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/premiere/sciences"
+              >
                 1ère Sciences
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      )}
-
-      {showDeuxieme && (
-        <nav className={isUnderNavOpen}>
-          <ul>
-            <li>
-              <Link to="/deuxieme/francais" onClick={handleCloseMenu}>
-                2ème Francais
-              </Link>
-            </li>
-            <li>
-              <Link to="/deuxieme/histoire" onClick={handleCloseMenu}>
-                2ème Histoire
-              </Link>
-            </li>
-            <li>
-              <Link to="/deuxieme/maths" onClick={handleCloseMenu}>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/premiere/langues"
+              >
+                1ère Langues
+              </NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown.Divider />
+            <NavDropdown
+              title="2ème"
+              className="navBar-link"
+              id="collasible-nav-dropdown"
+              drop="end"
+            >
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/deuxieme/francais"
+              >
+                2ème Français
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item className="navBar-link" href="/deuxieme/maths">
                 2ème Maths
-              </Link>
-            </li>
-            <li>
-              <Link to="/deuxieme/langues" onClick={handleCloseMenu}>
-                2ème Langues
-              </Link>
-            </li>
-            <li>
-              <Link to="/deuxieme/sciences" onClick={handleCloseMenu}>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/deuxieme/histoire"
+              >
+                2ème Histoire
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/deuxieme/sciences"
+              >
                 2ème Sciences
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      )}
-
-      {showTroisieme && (
-        <nav className={isUnderNavOpen}>
-          <ul>
-            <li>
-              <Link to="/troisieme/francais" onClick={handleCloseMenu}>
-                3ème Francais
-              </Link>
-            </li>
-            <li>
-              <Link to="/troisieme/histoire" onClick={handleCloseMenu}>
-                3ème Histoire
-              </Link>
-            </li>
-            <li>
-              <Link to="/troisieme/maths" onClick={handleCloseMenu}>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/deuxieme/langues"
+              >
+                2ème Langues
+              </NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown
+              title="3ème"
+              className="navBar-link"
+              id="collasible-nav-dropdown"
+              drop="end"
+            >
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/troisieme/francais"
+              >
+                3ème Français
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item className="navBar-link" href="/troisieme/maths">
                 3ème Maths
-              </Link>
-            </li>
-            <li>
-              <Link to="/troisieme/langues" onClick={handleCloseMenu}>
-                3ème Langues
-              </Link>
-            </li>
-            <li>
-              <Link to="/troisieme/sciences" onClick={handleCloseMenu}>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/troisieme/histoire"
+              >
+                3ème Histoire
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/troisieme/sciences"
+              >
                 3ème Sciences
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      )}
-
-      {showQuatrieme && (
-        <nav className={isUnderNavOpen}>
-          <ul>
-            <li>
-              <Link to="/quatrieme/francais" onClick={handleCloseMenu}>
-                4ème Francais
-              </Link>
-            </li>
-            <li>
-              <Link to="/quatrieme/histoire" onClick={handleCloseMenu}>
-                4ème Histoire
-              </Link>
-            </li>
-            <li>
-              <Link to="/quatrieme/maths" onClick={handleCloseMenu}>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/troisieme/langues"
+              >
+                3ème Langues
+              </NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown.Divider />
+            <NavDropdown
+              title="4ème"
+              className="navBar-link"
+              id="collasible-nav-dropdown"
+              drop="end"
+            >
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/quatrieme/français"
+              >
+                4ème Français
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item className="navBar-link" href="/quatrieme/maths">
                 4ème Maths
-              </Link>
-            </li>
-            <li>
-              <Link to="/quatrieme/langues" onClick={handleCloseMenu}>
-                4ème Langues
-              </Link>
-            </li>
-            <li>
-              <Link to="/quatrieme/sciences" onClick={handleCloseMenu}>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/quatrieme/histoire"
+              >
+                4ème Histoire
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/quatrieme/sciences"
+              >
                 4ème Sciences
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      )}
-    </>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/quatrieme/langues"
+              >
+                4ème Langues
+              </NavDropdown.Item>
+            </NavDropdown>
+          </NavDropdown>
+        </Nav>
+        <Nav className="ms-auto">
+          <Nav.Link className="navBar-link" href="/inscription">
+            Inscription
+          </Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
-};
+}
 
 export default NavBar;

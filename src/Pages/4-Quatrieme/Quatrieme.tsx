@@ -1,6 +1,6 @@
 import React from "react";
 
-import NavBar from "../../Components/NavBar";
+import NavBar from "../../Components/NavBar/NavBar";
 
 import QuatriemeFrancais from "./Francais/QuatriemeFrancais";
 import QuatriemeHistoire from "./Histoire/QuatriemeHistoire";

@@ -1,6 +1,6 @@
 import React from "react";
 
-import NavBar from "../../Components/NavBar";
+import NavBar from "../../Components/NavBar/NavBar";
 
 import PremiereFrancais from "./Francais/PremiereFrancais";
 import PremiereHistoire from "./Histoire/PremiereHistoire";

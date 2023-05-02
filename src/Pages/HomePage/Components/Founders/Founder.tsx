@@ -1,4 +1,8 @@
 import React from "react";
+import Alicia from "../../../../images/pp-Alicia.jpg";
+import Angelique from "../../../../images/pp-Angelique.jpg";
+import Marie from "../../../../images/pp-Marie.png";
+import Cath from "../../../../images/pp-Cath.jpg";
 import "./Founder.scss";
 
 function Founder() {
@@ -17,7 +21,9 @@ function Founder() {
       </div>
       <div className="homeFounder__imageContainer">
         <div className="homeFounder__imageContainer__hoverable">
-          <div className="homeFounder__imageContainer__hoverable--img img--alicia"></div>
+          <div className="homeFounder__imageContainer__hoverable--img">
+            <img src={Alicia} alt="Alicia" />
+          </div>
           <div className="homeFounder__imageContainer__hoverable--text">
             <h3>Alicia M.</h3>
             <span>-</span>
@@ -25,7 +31,9 @@ function Founder() {
           </div>
         </div>
         <div className="homeFounder__imageContainer__hoverable">
-          <div className="homeFounder__imageContainer__hoverable--img img--angelique"></div>
+          <div className="homeFounder__imageContainer__hoverable--img">
+            <img src={Angelique} alt="Angelique" />
+          </div>
           <div className="homeFounder__imageContainer__hoverable--text">
             <h3>Angélique T.</h3>
             <span>-</span>
@@ -33,7 +41,9 @@ function Founder() {
           </div>
         </div>
         <div className="homeFounder__imageContainer__hoverable">
-          <div className="homeFounder__imageContainer__hoverable--img img--marie"></div>
+          <div className="homeFounder__imageContainer__hoverable--img">
+            <img src={Marie} alt="Marie" />
+          </div>
           <div className="homeFounder__imageContainer__hoverable--text">
             <h3>Marie D.</h3>
             <span>-</span>
@@ -41,7 +51,9 @@ function Founder() {
           </div>
         </div>
         <div className="homeFounder__imageContainer__hoverable">
-          <div className="homeFounder__imageContainer__hoverable--img img--cath"></div>
+          <div className="homeFounder__imageContainer__hoverable--img">
+            <img src={Cath} alt="Cath" />
+          </div>
           <div className="homeFounder__imageContainer__hoverable--text">
             <h3>Catherine C.</h3>
             <span>-</span>

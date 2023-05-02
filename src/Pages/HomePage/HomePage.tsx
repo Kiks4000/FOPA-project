@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "../../Components/NavBar";
+import NavBar from "../../Components/NavBar/NavBar";
 import BannerHome from "./Components/BannerHome";
 import Gallery from "./Components/Gallery";
 import Founder from "./Components/Founders";

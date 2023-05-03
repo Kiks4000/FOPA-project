@@ -17,16 +17,16 @@ function NavBar() {
           <Nav.Link className="navBar-link" href="/competences-numerique">
             Competences Numériques
           </Nav.Link>
-          <Nav.Link className="navBar-link" href="/contact">
+          {/* <Nav.Link className="navBar-link" href="/contact">
             Contact
-          </Nav.Link>
+          </Nav.Link> */}
           <NavDropdown
             title="Classes"
             className="navBar-link"
             id="collasible-nav-dropdown"
           >
             <NavDropdown
-              title="1ère"
+              title="1ère Année"
               className="navBar-link"
               id="collasible-nav-dropdown"
               drop="end"
@@ -65,7 +65,7 @@ function NavBar() {
             </NavDropdown>
             <NavDropdown.Divider />
             <NavDropdown
-              title="2ème"
+              title="2ème Année"
               className="navBar-link"
               id="collasible-nav-dropdown"
               drop="end"
@@ -102,8 +102,9 @@ function NavBar() {
                 2ème Langues
               </NavDropdown.Item>
             </NavDropdown>
+            <NavDropdown.Divider />
             <NavDropdown
-              title="3ème"
+              title="3ème Année"
               className="navBar-link"
               id="collasible-nav-dropdown"
               drop="end"
@@ -142,7 +143,7 @@ function NavBar() {
             </NavDropdown>
             <NavDropdown.Divider />
             <NavDropdown
-              title="4ème"
+              title="4ème Année"
               className="navBar-link"
               id="collasible-nav-dropdown"
               drop="end"
@@ -184,6 +185,9 @@ function NavBar() {
         <Nav className="ms-auto">
           <Nav.Link className="navBar-link" href="/inscription">
             Inscription
+          </Nav.Link>
+          <Nav.Link className="navBar-link" href="/connexion">
+            Connexion
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>

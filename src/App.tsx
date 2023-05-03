@@ -3,6 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import HomePage from "./Pages/HomePage";
 import ContactPage from "./Pages/ContactPage";
+import CompetencesNumPage from "./Pages/CompetencesNumPage/CompetencesNumPage";
+import InscriptionPage from "./Pages/InscriptionPage";
+import ConnexionPage from "./Pages/ConnexionPage";
+import ErrorPage from "./Pages/ErrorPage";
 
 import Premiere from "./Pages/1-Premiere";
 import Deuxieme from "./Pages/2-Deuxieme";
@@ -17,7 +21,13 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route
+            path="/competences-numerique"
+            element={<CompetencesNumPage />}
+          />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/inscription" element={<InscriptionPage />} />
+          <Route path="/connexion" element={<ConnexionPage />} />
 
           <Route path="/premiere" element={<Premiere />} />
           <Route path="/premiere/francais" element={<Premiere />} />
@@ -46,6 +56,8 @@ function App() {
           <Route path="/quatrieme/langues" element={<Quatrieme />} />
           <Route path="/quatrieme/maths" element={<Quatrieme />} />
           <Route path="/quatrieme/sciences" element={<Quatrieme />} />
+
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>
     </div>

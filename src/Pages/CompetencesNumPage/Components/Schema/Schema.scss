@@ -1,0 +1,16 @@
+@import "../../../../styles/settings.module.scss";
+
+.schemaContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  background-color: $white-opacity;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

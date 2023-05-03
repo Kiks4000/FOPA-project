@@ -1,7 +1,7 @@
 @import "../../styles/settings.module.scss";
 
 .footer {
-  background-color: #f5f5f5;
+  background-color: $white;
   padding: 20px 0;
   height: 20rem;
   display: flex;
@@ -15,18 +15,25 @@
     flex-direction: row;
     gap: 3rem;
 
+    @media (max-width: 919px) {
+      height: 100%;
+      flex-direction: column;
+      gap: 0;
+    }
+
     a {
       color: $black;
       cursor: pointer;
       text-decoration: none;
       font-family: $font-family;
+      text-overflow: clip;
       font-size: 2rem;
       text-transform: uppercase;
       padding: 0.5rem 1rem;
       transition: color 0.2s;
 
       &:hover {
-        opacity: 0.75;
+        color: $yellow;
       }
     }
   }

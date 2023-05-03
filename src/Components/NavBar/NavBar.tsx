@@ -14,7 +14,7 @@ function NavBar() {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav>
-          <Nav.Link className="navBar-link" href="/competences-numerique">
+          <Nav.Link className="navBar-link" href="/competencesNumeriques">
             Competences Numériques
           </Nav.Link>
           {/* <Nav.Link className="navBar-link" href="/contact">

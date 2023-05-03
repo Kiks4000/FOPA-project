@@ -15,7 +15,7 @@ function NavBar() {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav>
           <Nav.Link className="navBar-link" href="/competencesNumeriques">
-            Competences Numériques
+            Compétences Numériques
           </Nav.Link>
           {/* <Nav.Link className="navBar-link" href="/contact">
             Contact

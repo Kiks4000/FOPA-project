@@ -1,0 +1,35 @@
+@import "../../styles/settings.module.scss";
+
+.inscriptionSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $white-opacity;
+  height: calc(100vh - 28rem);
+
+  .inscriptionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 5rem;
+    border-radius: 1rem;
+    background-color: $white;
+    box-shadow: 0 0 1rem $black-opacity;
+
+    .inscriptionTitle {
+      font-size: 3rem;
+      font-weight: 600;
+      color: $black;
+    }
+
+    .incriptionFormContainer {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      width: 100%;
+    }
+  }
+}

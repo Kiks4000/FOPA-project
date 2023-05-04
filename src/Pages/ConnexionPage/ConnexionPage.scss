@@ -1,0 +1,35 @@
+@import "../../styles/settings.module.scss";
+
+.connexionSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $white-opacity;
+  height: calc(100vh - 28rem);
+
+  .connexionFormContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 1rem;
+    padding: 2rem 5rem;
+    border-radius: 1rem;
+    background-color: $white;
+    box-shadow: 0 0 1rem $black-opacity;
+    .connexionFormTitle {
+      font-size: 3rem;
+      font-weight: 600;
+      color: $black;
+    }
+
+    .forgotPswdLink {
+      margin-bottom: 1rem;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+}

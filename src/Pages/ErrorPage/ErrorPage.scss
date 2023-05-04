@@ -1,0 +1,14 @@
+@import "../../styles/settings.module.scss";
+
+.errorPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $white-opacity;
+  height: calc(100vh - 28rem);
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+}

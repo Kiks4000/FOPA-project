@@ -1,6 +1,8 @@
 import React from "react";
 
 import NavBar from "../../Components/NavBar/NavBar";
+import Footer from "../../Components/Footer/Footer";
+import Button from "../../Components/Button/Button";
 
 import PremiereFrancais from "./Francais/PremiereFrancais";
 import PremiereHistoire from "./Histoire/PremiereHistoire";
@@ -8,7 +10,7 @@ import PremiereLangues from "./Langues/PremiereLangues";
 import PremiereMaths from "./Maths/PremiereMaths";
 import PremiereSciences from "./Sciences/PremiereSciences";
 
-import "./Premiere.module.scss";
+import "./Premiere.scss";
 
 function Premiere() {
   const url = window.location.href;
@@ -18,31 +20,45 @@ function Premiere() {
   return (
     <>
       <NavBar />
-      <section>
+      <section className="premiereSection">
         {lastPart === "francais" ? (
-          <PremiereFrancais />
+          <>
+            <h1 className="premiereTitle">1ère Français</h1>
+            <PremiereFrancais />
+          </>
         ) : lastPart === "histoire" ? (
-          <PremiereHistoire />
+          <>
+            <h1 className="premiereTitle">1ère Histoire</h1>
+            <PremiereHistoire />
+          </>
         ) : lastPart === "langues" ? (
-          <PremiereLangues />
+          <>
+            <h1 className="premiereTitle">1ère Langues</h1>
+            <PremiereLangues />
+          </>
         ) : lastPart === "maths" ? (
-          <PremiereMaths />
+          <>
+            <h1 className="premiereTitle">1ère Maths</h1>
+            <PremiereMaths />
+          </>
         ) : lastPart === "sciences" ? (
-          <PremiereSciences />
+          <>
+            <h1 className="premiereTitle">1ère Sciences</h1>
+            <PremiereSciences />
+          </>
         ) : (
           <div>
-            <h1>Première</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              voluptas, quod, quia, voluptates quae voluptatibus quibusdam
-              accusantium quos voluptatum quas quidem. Quisquam, quae. Quisquam
-              voluptas, quod, quia, voluptates quae voluptatibus quibusdam
-              accusantium quos voluptatum quas quidem. Quisquam, quae. Quisquam
-              voluptas, quod, quia, voluptates quae voluptatibus quibusdam
-            </p>
+            <div className="premiereButtons">
+              <Button label="Français" url="/premiere/francais" />
+              <Button label="Histoire" url="/premiere/histoire" />
+              <Button label="Langues" url="/premiere/langues" />
+              <Button label="Maths" url="/premiere/maths" />
+              <Button label="Sciences" url="/premiere/sciences" />
+            </div>
           </div>
         )}
       </section>
+      <Footer />
     </>
   );
 }

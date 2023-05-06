@@ -1,0 +1,12 @@
+@import "../../../styles/settings.module.scss";
+
+.premFraSynthExo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: calc(100vw - 2rem);
+  height: 30rem;
+  gap: 5rem;
+  padding: 2rem 5rem;
+}

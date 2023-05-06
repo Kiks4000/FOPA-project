@@ -1,0 +1,14 @@
+@import "../../../styles/settings.module.scss";
+
+.premLangSynthExo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  // change width
+  width: 100vw;
+  gap: 1rem;
+  padding: 2rem 5rem;
+  border-radius: 1rem;
+  border: 1px solid $black;
+}

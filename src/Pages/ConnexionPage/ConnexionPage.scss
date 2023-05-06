@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   background-color: $white-opacity;
-  height: calc(100vh - 28rem);
+  min-height: calc(100vh - 28rem);
 
   .connexionFormContainer {
     display: flex;

@@ -1,6 +1,6 @@
 @import "../../styles/settings.module.scss";
 
-.inscriptionSection {
+.contactSection {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,28 +8,40 @@
   background-color: $white-opacity;
   min-height: calc(100vh - 28rem);
 
-  .inscriptionContainer {
+  .contactContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 45rem;
     gap: 1rem;
-    padding: 2rem 5rem;
+    padding: 1rem 3rem;
     border-radius: 1rem;
     background-color: $white;
     box-shadow: 0 0 1rem $black-opacity;
 
-    .inscriptionTitle {
+    .contactTitle {
       font-size: 3rem;
       font-weight: 600;
       color: $black;
     }
 
-    .inscriptionFormContainer {
+    .contactFormContainer {
       display: flex;
       flex-direction: row;
       gap: 2rem;
       width: 100%;
+      padding: 1rem;
+
+      .contactFormContainerLeft {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contactFormContainerRight {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 }

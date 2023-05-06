@@ -50,7 +50,7 @@ function InscriptionPage() {
       <div className="inscriptionSection">
         <div className="inscriptionContainer">
           <h1 className="inscriptionTitle">Inscription</h1>
-          <div className="incriptionFormContainer">
+          <div className="inscriptionFormContainer">
             <div className="inscriptionFormLeft">
               <Input label="Nom" placeholder="Nom" type="text" />
               <Input label="Prénom" placeholder="Prénom" type="text" />

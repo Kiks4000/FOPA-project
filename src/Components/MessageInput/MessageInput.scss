@@ -1,0 +1,32 @@
+@import "../../styles/settings.module.scss";
+
+.messageInputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  .messageInputLabel {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $black;
+    margin-bottom: 1rem;
+  }
+
+  .messageInputShape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: $white;
+    width: 100%;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $black;
+    outline: $yellow solid 0.2rem;
+
+    resize: none;
+  }
+}

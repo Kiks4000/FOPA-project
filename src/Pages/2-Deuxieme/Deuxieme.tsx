@@ -1,14 +1,17 @@
 import React from "react";
 
 import NavBar from "../../Components/NavBar/NavBar";
+import Button from "../../Components/Button";
+import Footer from "../../Components/Footer";
 
 import DeuxiemeFrancais from "./Francais/DeuxiemeFrancais";
 import DeuxiemeHistoire from "./Histoire/DeuxiemeHistoire";
 import DeuxiemeLangues from "./Langues/DeuxiemeLangues";
 import DeuxiemeMaths from "./Maths/DeuxiemeMaths";
 import DeuxiemeSciences from "./Sciences/DeuxiemeSciences";
+import DeuxiemeReligion from "./Religion/DeuxiemeReligion";
 
-import "./Deuxieme.module.scss";
+import "./Deuxieme.scss";
 
 function Deuxieme() {
   const url = window.location.href;
@@ -18,31 +21,51 @@ function Deuxieme() {
   return (
     <>
       <NavBar />
-      <section>
+      <section className="deuxiemeSection">
         {lastPart === "francais" ? (
-          <DeuxiemeFrancais />
+          <>
+            <h1 className="deuxiemeTitle">2ème Français</h1>
+            <DeuxiemeFrancais />
+          </>
         ) : lastPart === "histoire" ? (
-          <DeuxiemeHistoire />
+          <>
+            <h1 className="deuxiemeTitle">2ème Histoire</h1>
+            <DeuxiemeHistoire />
+          </>
         ) : lastPart === "langues" ? (
-          <DeuxiemeLangues />
+          <>
+            <h1 className="deuxiemeTitle">2ème Langues</h1>
+            <DeuxiemeLangues />
+          </>
         ) : lastPart === "maths" ? (
-          <DeuxiemeMaths />
+          <>
+            <h1 className="deuxiemeTitle">2ème Maths</h1>
+            <DeuxiemeMaths />
+          </>
         ) : lastPart === "sciences" ? (
-          <DeuxiemeSciences />
+          <>
+            <h1 className="deuxiemeTitle">2ème Sciences</h1>
+            <DeuxiemeSciences />
+          </>
+        ) : lastPart === "religion" ? (
+          <>
+            <h1 className="deuxiemeTitle">2ème Religion</h1>
+            <DeuxiemeReligion />
+          </>
         ) : (
           <div>
-            <h1>Deuxieme</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              voluptas, quod, quia, voluptates quae voluptatibus quibusdam
-              accusantium quos voluptatum quas quidem. Quisquam, quae. Quisquam
-              voluptas, quod, quia, voluptates quae voluptatibus quibusdam
-              accusantium quos voluptatum quas quidem. Quisquam, quae. Quisquam
-              voluptas, quod, quia, voluptates quae voluptatibus quibusdam
-            </p>
+            <div className="deuxiemeButtons">
+              <Button label="Français" url="/deuxieme/francais" />
+              <Button label="Histoire" url="/deuxieme/histoire" />
+              <Button label="Langues" url="/deuxieme/langues" />
+              <Button label="Maths" url="/deuxieme/maths" />
+              <Button label="Sciences" url="/deuxieme/sciences" />
+              <Button label="Religion" url="/deuxieme/religion" />
+            </div>
           </div>
         )}
       </section>
+      <Footer />
     </>
   );
 }

@@ -9,6 +9,7 @@ import PremiereHistoire from "./Histoire/PremiereHistoire";
 import PremiereLangues from "./Langues/PremiereLangues";
 import PremiereMaths from "./Maths/PremiereMaths";
 import PremiereSciences from "./Sciences/PremiereSciences";
+import PremiereReligion from "./Religion/PremiereReligion";
 
 import "./Premiere.scss";
 
@@ -46,6 +47,11 @@ function Premiere() {
             <h1 className="premiereTitle">1ère Sciences</h1>
             <PremiereSciences />
           </>
+        ) : lastPart === "religion" ? (
+          <>
+            <h1 className="premiereTitle">1ère Religion</h1>
+            <PremiereReligion />
+          </>
         ) : (
           <div>
             <div className="premiereButtons">
@@ -54,6 +60,7 @@ function Premiere() {
               <Button label="Langues" url="/premiere/langues" />
               <Button label="Maths" url="/premiere/maths" />
               <Button label="Sciences" url="/premiere/sciences" />
+              <Button label="Religion" url="/premiere/religion" />
             </div>
           </div>
         )}

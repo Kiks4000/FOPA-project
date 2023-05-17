@@ -1,14 +1,17 @@
 import React from "react";
 
 import NavBar from "../../Components/NavBar/NavBar";
+import Button from "../../Components/Button";
+import Footer from "../../Components/Footer/Footer";
 
 import QuatriemeFrancais from "./Francais/QuatriemeFrancais";
 import QuatriemeHistoire from "./Histoire/QuatriemeHistoire";
 import QuatriemeLangues from "./Langues/QuatriemeLangues";
 import QuatriemeMaths from "./Maths/QuatriemeMaths";
 import QuatriemeSciences from "./Sciences/QuatriemeSciences";
+import QuatriemeReligion from "./Religion/QuatriemeReligion";
 
-import "./Quatrieme.module.scss";
+import "./Quatrieme.scss";
 
 function Quatrieme() {
   const url = window.location.href;
@@ -17,31 +20,51 @@ function Quatrieme() {
   return (
     <>
       <NavBar />
-      <section>
+      <section className="quatriemeSection">
         {lastPart === "francais" ? (
-          <QuatriemeFrancais />
+          <>
+            <h1 className="quatriemeTitle">4ème Français</h1>
+            <QuatriemeFrancais />
+          </>
         ) : lastPart === "histoire" ? (
-          <QuatriemeHistoire />
+          <>
+            <h1 className="quatriemeTitle">4ème Histoire</h1>
+            <QuatriemeHistoire />
+          </>
         ) : lastPart === "langues" ? (
-          <QuatriemeLangues />
+          <>
+            <h1 className="quatriemeTitle">4ème Langues</h1>
+            <QuatriemeLangues />
+          </>
         ) : lastPart === "maths" ? (
-          <QuatriemeMaths />
+          <>
+            <h1 className="quatriemeTitle">4ème Maths</h1>
+            <QuatriemeMaths />
+          </>
         ) : lastPart === "sciences" ? (
-          <QuatriemeSciences />
+          <>
+            <h1 className="quatriemeTitle">4ème Sciences</h1>
+            <QuatriemeSciences />
+          </>
+        ) : lastPart === "religion" ? (
+          <>
+            <h1 className="quatriemeTitle">4ème Religion</h1>
+            <QuatriemeReligion />
+          </>
         ) : (
           <div>
-            <h1>Quatrieme</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              voluptas, quod, quia, voluptates quae voluptatibus quibusdam
-              accusantium quos voluptatum quas quidem. Quisquam, quae. Quisquam
-              voluptas, quod, quia, voluptates quae voluptatibus quibusdam
-              accusantium quos voluptatum quas quidem. Quisquam, quae. Quisquam
-              voluptas, quod, quia, voluptates quae voluptatibus quibusdam
-            </p>
+            <div className="quatriemeButtons">
+              <Button label="Français" url="/quatrieme/francais" />
+              <Button label="Histoire" url="/quatrieme/histoire" />
+              <Button label="Langues" url="/quatrieme/langues" />
+              <Button label="Maths" url="/quatrieme/maths" />
+              <Button label="Sciences" url="/quatrieme/sciences" />
+              <Button label="Religion" url="/quatrieme/religion" />
+            </div>
           </div>
         )}
       </section>
+      <Footer />
     </>
   );
 }

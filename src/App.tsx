@@ -35,6 +35,7 @@ function App() {
           <Route path="/premiere/langues" element={<Premiere />} />
           <Route path="/premiere/maths" element={<Premiere />} />
           <Route path="/premiere/sciences" element={<Premiere />} />
+          <Route path="/premiere/religion" element={<Premiere />} />
 
           <Route path="/deuxieme" element={<Deuxieme />} />
           <Route path="/deuxieme/francais" element={<Deuxieme />} />
@@ -42,6 +43,7 @@ function App() {
           <Route path="/deuxieme/langues" element={<Deuxieme />} />
           <Route path="/deuxieme/maths" element={<Deuxieme />} />
           <Route path="/deuxieme/sciences" element={<Deuxieme />} />
+          <Route path="/deuxieme/religion" element={<Deuxieme />} />
 
           <Route path="/troisieme" element={<Troisieme />} />
           <Route path="/troisieme/francais" element={<Troisieme />} />
@@ -49,6 +51,7 @@ function App() {
           <Route path="/troisieme/langues" element={<Troisieme />} />
           <Route path="/troisieme/maths" element={<Troisieme />} />
           <Route path="/troisieme/sciences" element={<Troisieme />} />
+          <Route path="/troisieme/religion" element={<Troisieme />} />
 
           <Route path="/quatrieme" element={<Quatrieme />} />
           <Route path="/quatrieme/francais" element={<Quatrieme />} />
@@ -56,6 +59,7 @@ function App() {
           <Route path="/quatrieme/langues" element={<Quatrieme />} />
           <Route path="/quatrieme/maths" element={<Quatrieme />} />
           <Route path="/quatrieme/sciences" element={<Quatrieme />} />
+          <Route path="/quatrieme/religion" element={<Quatrieme />} />
 
           <Route path="*" element={<ErrorPage />} />
         </Routes>

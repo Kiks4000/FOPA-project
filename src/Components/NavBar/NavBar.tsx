@@ -17,9 +17,6 @@ function NavBar() {
           <Nav.Link className="navBar-link" href="/competencesNumeriques">
             Compétences Numériques
           </Nav.Link>
-          {/* <Nav.Link className="navBar-link" href="/contact">
-            Contact
-          </Nav.Link> */}
           <NavDropdown
             title="Classes"
             className="navBar-link"
@@ -62,6 +59,13 @@ function NavBar() {
               >
                 1ère Langues
               </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/premiere/religion"
+              >
+                1ère Religion
+              </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown.Divider />
             <NavDropdown
@@ -100,6 +104,13 @@ function NavBar() {
                 href="/deuxieme/langues"
               >
                 2ème Langues
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/deuxieme/religion"
+              >
+                2ème Religion
               </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown.Divider />
@@ -140,6 +151,13 @@ function NavBar() {
               >
                 3ème Langues
               </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/troisieme/religion"
+              >
+                3ème Religion
+              </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown.Divider />
             <NavDropdown
@@ -178,6 +196,13 @@ function NavBar() {
                 href="/quatrieme/langues"
               >
                 4ème Langues
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item
+                className="navBar-link"
+                href="/quatrieme/religion"
+              >
+                4ème Religion
               </NavDropdown.Item>
             </NavDropdown>
           </NavDropdown>

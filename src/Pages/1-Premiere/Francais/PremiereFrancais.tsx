@@ -1,6 +1,7 @@
 import React from "react";
+import "../Premiere.scss";
+
 import ScrollableSection from "../../../Components/ScrollableSection/ScrollableSection";
-import "./PremiereFrancais.scss";
 import EmbedVideoSection from "../../../Components/EmbedVideoSection/EmbedVideoSection";
 
 function PremiereFrancais() {
@@ -69,13 +70,13 @@ function PremiereFrancais() {
 
   return (
     <>
-      <div className="premFraSection">
-        <div className="premFraSynthExo">
-          <div className="premFraSynthExo--Up">
+      <div className="premSection">
+        <div className="premSynthExo">
+          <div className="premSynthExo--Up">
             <ScrollableSection label="Synthèse" list={syntheseList} />
             <ScrollableSection label="Exercices" list={exercicesList} />
           </div>
-          <div className="premFraSynthExo--Down">
+          <div className="premSynthExo--Down">
             <ScrollableSection label="Liens Externes" list={linkList} />
             <EmbedVideoSection videoLink="https://www.youtube.com/watch?v=7C2z4GqqS5E" />
           </div>

@@ -13,6 +13,13 @@ import Deuxieme from "./Pages/2-Deuxieme";
 import Troisieme from "./Pages/3-Troisieme";
 import Quatrieme from "./Pages/4-Quatrieme";
 
+import CelluleAnimalePDF from "./Pages/CelluleAnimalePDF/CelluleAnimalePDF";
+import CelluleVegetalePDF from "./Pages/CelluleVegetalePDF/CelluleVegetalePDF";
+import DefendrePDFPage from "./Pages/DefendrePDF/DefendrePDF";
+import FantasyPDFPage from "./Pages/FantasyPDF/FantasyPDF";
+import EpouvanteurPDFPage from "./Pages/EpouvanteurPDF/EpouvanteurPDF";
+import QuestionnairePDFPage from "./Pages/QuestionnairePDF/QuestionnairePDF";
+
 import "../src/styles/main.scss";
 
 function App() {
@@ -60,6 +67,13 @@ function App() {
           <Route path="/quatrieme/maths" element={<Quatrieme />} />
           <Route path="/quatrieme/sciences" element={<Quatrieme />} />
           <Route path="/quatrieme/religion" element={<Quatrieme />} />
+
+          <Route path="/celluleAnimalePDF" element={<CelluleAnimalePDF />} />
+          <Route path="/celluleVegetalePDF" element={<CelluleVegetalePDF />} />
+          <Route path="/defendrePDF" element={<DefendrePDFPage />} />
+          <Route path="/fantasyPDF" element={<FantasyPDFPage />} />
+          <Route path="/epouvanteurPDF" element={<EpouvanteurPDFPage />} />
+          <Route path="/questionnairePDF" element={<QuestionnairePDFPage />} />
 
           <Route path="*" element={<ErrorPage />} />
         </Routes>

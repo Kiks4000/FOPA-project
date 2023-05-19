@@ -1,71 +1,133 @@
 import React from "react";
 import "../Troisieme.scss";
 
-import ScrollableSection from "../../../Components/ScrollableSection/ScrollableSection";
-import EmbedVideoSection from "../../../Components/EmbedVideoSection/EmbedVideoSection";
+import ScrollableSection, {
+  ScrollableSectionProps,
+} from "../../../Components/ScrollableSection/ScrollableSection";
 
 function TroisiemeReligion() {
-  const syntheseList = [
-    "Synthèse 1",
-    "Synthèse 2",
-    "Synthèse 3",
-    "Synthèse 4",
-    "Synthèse 5",
-    "Synthèse 6",
-    "Synthèse 7",
-    "Synthèse 8",
-    "Synthèse 9",
-    "Synthèse 10",
-    "Synthèse 11",
-    "Synthèse 12",
-    "Synthèse 13",
-    "Synthèse 14",
-    "Synthèse 15",
-    "Synthèse 16",
-    "Synthèse 17",
-    "Synthèse 18",
+  const syntheseList: ScrollableSectionProps["list"] = [
+    {
+      title: "Thème 1 - Construire le bonheur",
+    },
+    {
+      title: "Thème 2 - Affronter le mal",
+    },
+    {
+      title: "Thème 3 - Habiter le corps",
+    },
+    {
+      title: "Thème 4 - Convertir la violence",
+    },
+    {
+      title: "Thème 5 - Vivre et mourir",
+    },
+    {
+      title: "Thème 6 - Vivre en relation",
+    },
+    {
+      title: "Thème 7 - Pratiquer la justice et charité",
+    },
+    {
+      title: "Thème 8 - Traverser la souffrance",
+    },
+    {
+      title: "Thème 9 - Développer le rapport au monde",
+    },
+    {
+      title: "Thème 10 - Fonder la spiritualité de l'humain",
+    },
   ];
 
-  const exercicesList = [
-    "Exercice 1",
-    "Exercice 2",
-    "Exercice 3",
-    "Exercice 4",
-    "Exercice 5",
-    "Exercice 6",
-    "Exercice 7",
-    "Exercice 8",
-    "Exercice 9",
-    "Exercice 10",
-    "Exercice 11",
-    "Exercice 12",
-    "Exercice 13",
-    "Exercice 14",
-    "Exercice 15",
-    "Exercice 16",
-    "Exercice 17",
-    "Exercice 18",
+  const exercicesList: ScrollableSectionProps["list"] = [
+    {
+      title: "Thème 1 - Construire le bonheur",
+    },
+    {
+      title: "Thème 2 - Affronter le mal",
+    },
+    {
+      title: "Thème 3 - Habiter le corps",
+    },
+    {
+      title: "Thème 4 - Convertir la violence",
+    },
+    {
+      title: "Thème 5 - Vivre et mourir",
+    },
+    {
+      title: "Thème 6 - Vivre en relation",
+    },
+    {
+      title: "Thème 7 - Pratiquer la justice et charité",
+    },
+    {
+      title: "Thème 8 - Traverser la souffrance",
+    },
+    {
+      title: (
+        <p style={{ fontWeight: "bold", margin: 0 }}>
+          Thème 9 - C'est quoi le ramadan ? (c.f Vidéos)
+        </p>
+      ),
+      link: "/questionnairePDF",
+      targetSelf: true,
+    },
+    {
+      title: "Thème 10 - Fonder la spiritualité de l'humain",
+    },
   ];
 
-  const linkList = [
-    "Ext. Link 1",
-    "Ext. Link 2",
-    "Ext. Link 3",
-    "Ext. Link 4",
-    "Ext. Link 5",
-    "Ext. Link 6",
-    "Ext. Link 7",
-    "Ext. Link 8",
-    "Ext. Link 9",
-    "Ext. Link 10",
-    "Ext. Link 11",
-    "Ext. Link 12",
-    "Ext. Link 13",
-    "Ext. Link 14",
-    "Ext. Link 15",
-    "Ext. Link 16",
-    "Ext. Link 17",
-    "Ext. Link 18",
+  const linkList: ScrollableSectionProps["list"] = [
+    {
+      title: "Thème 1 - Construire le bonheur",
+    },
+    {
+      title: "Thème 2 - Affronter le mal",
+    },
+    {
+      title: "Thème 3 - Habiter le corps",
+    },
+    {
+      title: "Thème 4 - Convertir la violence",
+    },
+    {
+      title: "Thème 5 - Vivre et mourir",
+    },
+    {
+      title: "Thème 6 - Vivre en relation",
+    },
+    {
+      title: "Thème 7 - Pratiquer la justice et charité",
+    },
+    {
+      title: "Thème 8 - Traverser la souffrance",
+    },
+    {
+      title: "Thème 9 - Développer le rapport au monde",
+    },
+    {
+      title: "Thème 10 - Fonder la spiritualité de l'humain",
+    },
+  ];
+
+  const videoList: ScrollableSectionProps["list"] = [
+    {
+      title: (
+        <p style={{ fontWeight: "bold", margin: 0 }}>
+          Thème 4 - La souffrance – Effet du harcèlement
+        </p>
+      ),
+      link: "https://www.youtube.com/watch?v=Q8orcd0obrk",
+    },
+    {
+      title: (
+        <p style={{ fontWeight: "bold", margin: 0 }}>
+          Thème 9 - C'est quoi le ramadan ? (c.f Exercices)
+        </p>
+      ),
+      link: "https://www.youtube.com/watch?v=Q8orcd0obrk",
+    },
   ];
 
   return (
@@ -77,8 +139,8 @@ function TroisiemeReligion() {
             <ScrollableSection label="Exercices" list={exercicesList} />
           </div>
           <div className="troisSynthExo--Down">
-            <ScrollableSection label="Liens Externes" list={linkList} />
-            <EmbedVideoSection videoLink="https://www.youtube.com/watch?v=7C2z4GqqS5E" />
+            <ScrollableSection label="Divers" list={linkList} />
+            <ScrollableSection label="Vidéos" list={videoList} />
           </div>
         </div>
       </div>

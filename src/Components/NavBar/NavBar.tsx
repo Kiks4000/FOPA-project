@@ -168,7 +168,7 @@ function NavBar() {
             >
               <NavDropdown.Item
                 className="navBar-link"
-                href="/quatrieme/français"
+                href="/quatrieme/francais"
               >
                 4ème Français
               </NavDropdown.Item>

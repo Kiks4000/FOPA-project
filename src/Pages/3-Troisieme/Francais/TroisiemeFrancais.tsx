@@ -1,71 +1,121 @@
 import React from "react";
 import "../Troisieme.scss";
 
-import ScrollableSection from "../../../Components/ScrollableSection/ScrollableSection";
-import EmbedVideoSection from "../../../Components/EmbedVideoSection/EmbedVideoSection";
+import ScrollableSection, {
+  ScrollableSectionProps,
+} from "../../../Components/ScrollableSection/ScrollableSection";
 
 function TroisiemeFrancais() {
-  const syntheseList = [
-    "Synthèse 1",
-    "Synthèse 2",
-    "Synthèse 3",
-    "Synthèse 4",
-    "Synthèse 5",
-    "Synthèse 6",
-    "Synthèse 7",
-    "Synthèse 8",
-    "Synthèse 9",
-    "Synthèse 10",
-    "Synthèse 11",
-    "Synthèse 12",
-    "Synthèse 13",
-    "Synthèse 14",
-    "Synthèse 15",
-    "Synthèse 16",
-    "Synthèse 17",
-    "Synthèse 18",
+  const syntheseList: ScrollableSectionProps["list"] = [
+    {
+      title: "UAA 0 - Justifier, expliciter",
+    },
+    {
+      title: "UAA 1 - Rechercher l'information",
+    },
+    {
+      title: "UAA 2 - Réduire, résumer et synthétiser",
+    },
+    {
+      title: (
+        <p style={{ fontWeight: "bold", margin: 0 }}>
+          UAA 3 - Défendre une opinion par écrit
+        </p>
+      ),
+      link: "/defendrePDF",
+      targetSelf: true,
+    },
+    {
+      title: "UAA 4 - Défendre oralement une opinion et négocier",
+    },
+    {
+      title: "UAA 5 - S'inscrire dans une œuvre culturelle",
+    },
+    {
+      title: "UAA 6 - Relater et partager des expériences culturelles",
+    },
   ];
 
-  const exercicesList = [
-    "Exercice 1",
-    "Exercice 2",
-    "Exercice 3",
-    "Exercice 4",
-    "Exercice 5",
-    "Exercice 6",
-    "Exercice 7",
-    "Exercice 8",
-    "Exercice 9",
-    "Exercice 10",
-    "Exercice 11",
-    "Exercice 12",
-    "Exercice 13",
-    "Exercice 14",
-    "Exercice 15",
-    "Exercice 16",
-    "Exercice 17",
-    "Exercice 18",
+  const exercicesList: ScrollableSectionProps["list"] = [
+    {
+      title: "UAA 0 - Justifier, expliciter",
+    },
+    {
+      title: "UAA 1 - Rechercher l'information",
+    },
+    {
+      title: "UAA 2 - Réduire, résumer et synthétiser",
+    },
+    {
+      title: (
+        <p style={{ fontWeight: "bold", margin: 0 }}>
+          UAA 3 - Le passé composé
+        </p>
+      ),
+      link: "https://www.francaisfacile.com/exercices/exercice-francais-2/exercice-francais-17535.php",
+    },
+    {
+      title: "UAA 4 - Défendre oralement une opinion et négocier",
+    },
+    {
+      title: "UAA 5 - S'inscrire dans une œuvre culturelle",
+    },
+    {
+      title: (
+        <p style={{ fontWeight: "bold", margin: 0 }}>
+          UAA 6 - Introduction au genre Fantasy
+        </p>
+      ),
+      link: "/fantasyPDF",
+      targetSelf: true,
+    },
+    {
+      title: (
+        <p style={{ fontWeight: "bold", margin: 0 }}>
+          UAA 6 - L’Apprenti Épouvanteur, journal de bord
+        </p>
+      ),
+      link: "/epouvanteurPDF",
+      targetSelf: true,
+    },
   ];
 
-  const linkList = [
-    "Ext. Link 1",
-    "Ext. Link 2",
-    "Ext. Link 3",
-    "Ext. Link 4",
-    "Ext. Link 5",
-    "Ext. Link 6",
-    "Ext. Link 7",
-    "Ext. Link 8",
-    "Ext. Link 9",
-    "Ext. Link 10",
-    "Ext. Link 11",
-    "Ext. Link 12",
-    "Ext. Link 13",
-    "Ext. Link 14",
-    "Ext. Link 15",
-    "Ext. Link 16",
-    "Ext. Link 17",
-    "Ext. Link 18",
+  const linkList: ScrollableSectionProps["list"] = [
+    {
+      title: (
+        <p style={{ fontWeight: "bold", margin: 0 }}>
+          Apprendre le français facilement - Chaine TikTok
+        </p>
+      ),
+      link: "https://www.tiktok.com/@maitressadeline?_t=8cLKhG3RdQR&_r=1",
+    },
+    {
+      title: (
+        <p style={{ fontWeight: "bold", margin: 0 }}>
+          Vulgarisation du français - Chaine TikTok
+        </p>
+      ),
+      link: " https://www.tiktok.com/@athenasol?_t=8cLKpByJMDL&_r=1",
+    },
+  ];
+
+  const videoList: ScrollableSectionProps["list"] = [
+    {
+      title: (
+        <p style={{ fontWeight: "bold", margin: 0 }}>
+          UAA 5 - C - Art - Ambolage
+        </p>
+      ),
+      link: "https://www.youtube.com/watch?v=6wvrKPPRO8w",
+    },
+    {
+      title: (
+        <p style={{ fontWeight: "bold", margin: 0 }}>
+          UAA 5 - Recomposition : Le mashup
+        </p>
+      ),
+      link: "https://www.youtube.com/watch?v=Sc_xOfRslDg",
+    },
   ];
 
   return (
@@ -77,8 +127,8 @@ function TroisiemeFrancais() {
             <ScrollableSection label="Exercices" list={exercicesList} />
           </div>
           <div className="troisSynthExo--Down">
-            <ScrollableSection label="Liens Externes" list={linkList} />
-            <EmbedVideoSection videoLink="https://www.youtube.com/watch?v=7C2z4GqqS5E" />
+            <ScrollableSection label="Divers" list={linkList} />
+            <ScrollableSection label="Vidéos" list={videoList} />
           </div>
         </div>
       </div>

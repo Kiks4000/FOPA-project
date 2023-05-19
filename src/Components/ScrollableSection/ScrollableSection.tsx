@@ -1,9 +1,13 @@
 import React from "react";
 import "./ScrollableSection.scss";
 
-type ScrollableSectionProps = {
+export type ScrollableSectionProps = {
   label: string;
-  list: string[];
+  list: Array<{
+    title: string | JSX.Element;
+    link?: string;
+    targetSelf?: boolean;
+  }>;
 };
 
 const ScrollableSection: React.FC<ScrollableSectionProps> = ({
@@ -15,8 +19,19 @@ const ScrollableSection: React.FC<ScrollableSectionProps> = ({
       <h3 className="synthSectionTitle">{label}</h3>
       <div className="synthSectionList">
         {list.map((syntheseTitle, index) => (
-          <div className="synthSectionItem" key={index}>
-            {syntheseTitle}
+          <div
+            className="synthSectionItem"
+            key={index}
+            onClick={() => {
+              if (syntheseTitle.link) {
+                window.open(
+                  syntheseTitle.link,
+                  syntheseTitle.targetSelf ? "_self" : "_blank"
+                );
+              }
+            }}
+          >
+            {syntheseTitle.title}
           </div>
         ))}
       </div>

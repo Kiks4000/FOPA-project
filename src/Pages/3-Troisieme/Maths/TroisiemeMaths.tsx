@@ -79,7 +79,7 @@ function TroisiemeMaths() {
             <ScrollableSection label="Exercices" list={exercicesList} />
           </div>
           <div className="troisSynthExo--Down">
-            <ScrollableSection label="Diverss" list={linkList} />
+            <ScrollableSection label="Divers" list={linkList} />
             <EmbedVideoSection videoLink="https://www.youtube.com/watch?v=1B8fBmLIsh8" />
           </div>
         </div>

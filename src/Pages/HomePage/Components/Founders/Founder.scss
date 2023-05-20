@@ -62,7 +62,7 @@
 
       &--img {
         img {
-          max-height: 35rem;
+          min-height: 35rem;
           max-width: 35rem;
         }
       }
@@ -92,4 +92,12 @@
       }
     }
   }
+}
+
+.fonction {
+  font-size: 1.5rem;
+  font-family: $font-family-title;
+  color: $black;
+  text-align: center;
+  // max-width: 35rem;
 }
